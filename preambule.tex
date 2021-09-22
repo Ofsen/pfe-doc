@@ -1,0 +1,40 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=2cm, bottom=2cm]{geometry}
+\usepackage{float}%positionner les images
+\usepackage{graphicx}%pour les images
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{makecell}
+\usepackage{url}
+\usepackage{tablefootnote}
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue
+hyperfootnotes=false]{hyperref}
+
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} %------- Faire les trai Dans La Page De Garde
+
+%---- Begin Tableau Considérations pour les systèmes relationnels vs NoSQL
+\usepackage{array,multirow,makecell} 
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+\newcolumntype{F}[1]{>{ \centering \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
+\newcolumntype{R}[1]{>{  \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
+\newcolumntype{G}[1]{>{ \centering \vspace{2.mm} \arraybackslash}m{#1}<{ \vspace{2.mm}\arraybackslash }}
+%---- End Tableau Considérations pour les systèmes relationnels vs NoSQL
+
+%------- Begin Ajouter les subsubsection à la table des matiere--------
+\addtocounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+%------- end Ajouter les subsubsection à la table des matiere--------
+
+\usepackage{footnote} %------ Pur ressortir les note des élèment du tableau
+
+\usepackage[french]{babel}
+
+\usepackage{fancyhdr}
+
+\usepackage{adjustbox}% pour orionté le tab 90°
+\usepackage{amssymb}% pour chekmark dans le tableau

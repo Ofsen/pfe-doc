@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper,onecolumn,openright,oneside]{report}
+\usepackage[square,sort&compress,comma,numbers]{natbib}
+\usepackage[sectionbib]{chapterbib}
+\input{preambule}
+\makesavenoteenv{tabular}
+
+
+\begin{document}
+	\setcellgapes{3pt}
+	
+	\begin{titlepage}
+		
+		\begin{center}
+			
+			\textsc{\LARGE République Algérienne Démocratique et Populaire}\\
+			\textsc{\LARGE Ministère de l’Enseignement Supérieur et de la Recherche Scientifique}\\
+			\textsc{\LARGE Université Mouloud Mammeri de Tizi-Ouzou}\\
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1.5]{ummto.PNG}
+			\end{figure}
+			
+			\textsc{\Large En vue de l’obtention du diplôme de Master Academique}\\
+			\textsc{\Large Spécialité : Informatique}\\
+			\textsc{\Large Options : Systèmes Informatiques et Ingénierie Des Systèmes d’information}\\[1cm]
+			
+			
+			\textsc{\Large Thème}\\
+			\HRule \\[0.5cm]
+			% { \huge \bfseries Mise en place d'une solution web ERP \\
+			% 	Cas: Œuvres Universitaires \\[0.4cm] }
+            { \huge \bfseries Implémentation d'une solution web ERP \\
+				Cas: Œuvres Universitaires \\[0.4cm] }
+			
+			\HRule \\[0.5cm]
+			
+			
+			\emph{Présenté par :}\\
+			
+			Yanis \textsc{OUERDANE}\\
+			Mohand \textsc{OURAD}\\[1.5cm]
+			
+			\emph{Devant le jury composé de :}\\
+			
+			\leftskip=4.5cm
+			Président(e) : M$^{me}$ / M$^{elle}$ / M$^{r}$ JOHN Doe \\
+			Examinateur(trice) : M$^{me}$ / M$^{elle}$ / M$^{r}$ DOE John\\
+			Promoteur(trice) : M$^{me}$ \textsc{Goumeziane} Lynda \\ [1.5cm]
+			
+			
+			\vfill
+            {\large Année universitaire: 2020/2021}
+			
+		\end{center}
+		
+	\end{titlepage}
+
+	\chapter*{\huge Remerciements}
+	
+	\begin{center}
+		\it \Large
+		D’abord, nous remercions le bon \textbf{DIEU} de nous avoir donné santé et courage pour réaliser ce travail.\\
+		
+		Nous tenons à exprimer notre profonde gratitude à notre encadreur \textbf{Mme GOUMEZIANE Lynda}, pour nous avoir encadré et guidé et surtout pour ses judicieux conseils qui ont contribué à alimenter notre réflexion.\\
+		
+		Nous remercions chaleureusement les membres de jury pour l’honneur qu’ils nous ont fait en acceptant de juger notre travail.\\
+		
+		Nos sincères sentiments vont à nos parents qui ont sacrifié jusqu’aujourd’hui et leurs encouragements tout le long de notre parcours.\\
+		
+		\leftskip=10cm 
+		
+		Yanis, Mohand.
+		
+		\leftskip=0cm
+		
+	\end{center}
+	%------------------- End Remerciement ----------------------------
+	
+	\chapter*{\huge Dédicaces}
+	
+	\begin{center}
+		\it \Large
+		Je dédie ce modeste travail :
+		A mes très chers parents que dieu les
+		protègent, pour leur aide et leur soutien tout au long
+		de mes études,\\
+		
+		A toute ma famille, à mes chers amis,\\
+		
+		Enfin à tous ceux qui ont contribué de près
+		ou de loin pour la réalisation de ce travail.\\
+		
+		\leftskip=12cm
+		
+		Yanis.
+		
+		\leftskip=0cm
+		
+	\end{center}
+    \chapter*{\huge Dédicaces}
+	
+	\begin{center}
+		\it \Large
+		Je dédie ce modeste travail :
+		A mes très chers parents que dieu les
+		protègent, pour leur aide et leur soutien tout au long
+		de mes études,\\
+		
+		A toute ma famille, à mes chers amis,\\
+		
+		Enfin à tous ceux qui ont contribué de près
+		ou de loin pour la réalisation de ce travail.\\
+		
+		\leftskip=12cm
+		
+		Mohand.
+		
+		\leftskip=0cm
+		
+	\end{center}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+
+	\pagestyle{fancy}
+	\fancyhead{}
+	
+	\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
+	
+	\rhead[\textsl{\leftmark}]{\textsl{\rightmark}}
+	\lhead[\textsl{\rightmark}]{\textsl{\leftmark}}
+	
+	\renewcommand{\headrulewidth}{1.2pt}
+	
+	\newcommand\blfootnote[1]{
+		\begingroup
+		\renewcommand\thefootnote{}\footnote{#1}
+		\addtocounter{footnote}{-1}
+		\endgroup
+	}
+        \part{Solutions Web}
+            \include{chapitre1/chapitre1}
+
+        
+
+	
+\end{document}
