@@ -129,7 +129,7 @@
 	
 	\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
 	
-	\rhead[\textsl{\leftmark}]{\textsl{\rightmark}}
+	% \rhead[\textsl{\leftmark}]{\textsl{\rightmark}}
 	\lhead[\textsl{\rightmark}]{\textsl{\leftmark}}
 	
 	\renewcommand{\headrulewidth}{1.2pt}
@@ -141,13 +141,14 @@
 		\endgroup
 	}
 
-		\part*{Introduction Générale}
-			\include{intro/introduction}
+	\part*{Introduction Générale}
+		\include{intro/introduction}
 
-        \part{Les Œuvres Universitaires}
-            \include{chapitre1/chapitre1}
+    \part{Les Œuvres Universitaires}
+        \include{chapitre1/chapitre1}
 
-        
+	\part{Les Solutions de Gestion d'Entreprise}
+        \include{chapitre2/chapitre2}
 
 	
 \end{document}
