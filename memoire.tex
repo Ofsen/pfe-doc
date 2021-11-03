@@ -1,9 +1,9 @@
 \documentclass[11pt,a4paper,onecolumn,openright,oneside]{report}
 \usepackage[square,sort&compress,comma,numbers]{natbib}
 \usepackage[sectionbib]{chapterbib}
+\usepackage[printonlyused,withpage]{acronym}
 \input{preambule}
 \makesavenoteenv{tabular}
-
 
 \begin{document}
 	\setcellgapes{3pt}
@@ -123,6 +123,8 @@
 	\tableofcontents
 	\listoffigures
 	\listoftables
+
+	\include{abreviations/abr}
 
 	\pagestyle{fancy}
 	\fancyhead{}
