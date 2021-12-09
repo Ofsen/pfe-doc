@@ -8,6 +8,7 @@
 \usepackage{makecell}
 \usepackage{url}
 \usepackage{tablefootnote}
+\usepackage{longtable}
 \usepackage[colorlinks = true,
 linkcolor = blue,
 urlcolor  = blue,
@@ -23,6 +24,8 @@ hyperfootnotes=false]{hyperref}
 \newcolumntype{F}[1]{>{ \centering \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
 \newcolumntype{R}[1]{>{  \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
 \newcolumntype{G}[1]{>{ \centering \vspace{2.mm} \arraybackslash}m{#1}<{ \vspace{2.mm}\arraybackslash }}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{Z}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %---- End Tableau Considérations pour les systèmes relationnels vs NoSQL
 
 %------- Begin Ajouter les subsubsection à la table des matiere--------

@@ -14,12 +14,12 @@ L'acronyme \acs{ERP} signifie Entreprise Resource Planning\cite{def-erp}, et sa 
 
 Contrairement au \acs{MRP} (Manufacturing Resource Planning) qui se contente de la planification des besoins, l'\acs{ERP} est un logiciel qui permet la gestion de tous les sous-systèmes de l'entreprise et la coordination de ces sous-systèmes.\\
 
-Pour y parvenir l’\acs{ERP} intègre toutes les fonctions utiles de l'entreprise sous forme de modules qui partagent une seule base de données, ce qui permet l'échange d'informations entre modules, dans ce cas, on parle de moteurs de workflow.\\
+Pour y parvenir l’\acs{ERP} intègre toutes les fonctions utiles de l'entreprise sous forme de modules qui partagent une seule base de données, ce qui permet l'échange d'informations entre modules, dans ce cas, on parle de moteurs de workflow\footnote{"the sequence of steps involved in moving from the beginning to the end of a working process" - \href{https://www.merriam-webster.com/dictionary/workflow}{merriam-webster.com/dictionary - Definition of workflow}}.\\
 
 \section{Historique}
 Joseph Orlicky a été à l'origine de la création de l'\acs{ERP}.\cite{hist-erp} Il a créé l'acronyme de \acs{MRP} dans les années 1960, qui est l'ancêtre de la planification de la demande matérielle d'\acs{ERP}. \acs{MRP} répond principalement aux besoins de planification de l'entreprise.\\
 
-Le concept d'\acs{ERP} tel que nous le connaissons est apparu pour la première fois dans les années 1990, mais avec l'avènement d'Internet, il n'a commencé à se développer que dans les années 2000. L'utilisation de l'\acs{ERP} s'est généralisée et a évolué vers l'\acs{ERP} tel que nous le connaissons aujourd'hui.
+Le concept d'\acs{ERP} tel que nous le connaissons est apparu pour la première fois dans les années 1990, mais avec l'avènement d'internet, il n'a commencé à se développer que dans les années 2000. L'utilisation de l'\acs{ERP} s'est généralisée et a évolué vers l'\acs{ERP} tel que nous le connaissons aujourd'hui.
 
 \section{Avantages liés à l’intégration d’un \acs{ERP}}
 Plusieurs études ont démontré les bénéfices de la mise en place d'un \acs{ERP}, dont l'une a été menée par Aberdeen Group,\cite{avantages} qui a quantifié et publié les résultats suivants :\\
@@ -73,7 +73,7 @@ Les projets \acs{ERP} entraînent généralement des coûts lors de la configura
 
 On peut constater qu’en 2017 plus de 60\% des entreprises qui ont implémenté un \acs{ERP} ont dépassé le budget prévu, 58\% en 2016 et 55\% en 2015.\\
 
-En plus du coût, comme le montre l'étude 2010 du rapport ERP du cabinet de conseil Panorama Consulting\cite{panorama-consulting}, un projet d'une telle envergure peut nécessiter plus de temps et de ressources que prévu.\\
+En plus du coût, comme le montre l'étude 2010 du rapport \acs{ERP} du cabinet de conseil Panorama Consulting\cite{panorama-consulting}, un projet d'une telle envergure peut nécessiter plus de temps et de ressources que prévu.\\
 
 \begin{figure}[H]
     \centering
@@ -84,7 +84,19 @@ En plus du coût, comme le montre l'étude 2010 du rapport ERP du cabinet de con
 Cette étude montre que plus de 35,5\% des entreprises ont mis en place un \acs{ERP} et constatent que le délai de mise en place a dépassé le délai autorisé. Il faut également noter que la durée moyenne de mise en place de l'\acs{ERP} est de 18 ou 4 mois, d'un éditeur à l'autre.\\
 
 \section{Fonctionnalités}
-L'ERP gère et organise automatiquement et dynamiquement les informations des différents services de l'entreprise, de l'approvisionnement des ressources aux ventes en passant par la production, ces fonctions\cite{funcs} sont nombreuses. Les modules les plus couramment utilisés sont :\\
+Un \acs{ERP} est donc composé de modules\cite{modules}, ces modules son interconnecté et coexistent dans le système centralisé. Ce système centralisé est connecté à une seule base de données, ce qui donne l'avantage d'avoir tout un système et toutes les données requissent dans un seul endroit.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{ERP/erp-modules.png}
+    \caption{Les modules d'un ERP}
+\end{figure} 
+
+Les besoins de chaque entreprise varient considérablement l'une de l'autre, mais l'\acs{ERP} donnent à celles-ci le pouvoir de choisir les modules dont elles ont vraiment besoin. Une entreprise orientée produite peut vouloir centraliser son inventaire et donc implémenter un module de gestion de stock, tandis qu'une entreprise orientée services pourront envisager l'implémentation d'un module de gestion de la relation clients.\\
+
+Malgré leurs différences, ces deux types d'entreprise auront surement besoin de coordonner et gérer leurs employés ce qui les pousserait à envisager l'implementer d'un module de gestion des ressources humaine.\\
+
+L'\acs{ERP} gère et organise automatiquement et dynamiquement les informations des différents services de l'entreprise, de l'approvisionnement des ressources aux ventes en passant par la production, ces fonctions\cite{funcs} sont nombreuses. Les modules les plus couramment utilisés sont :\\
 
 \begin{itemize}
     \item Gestion de production
@@ -152,9 +164,99 @@ Chaque module couvre ses propres fonctions, et le tableau suivant résume certai
             
             \hline
         \end{tabular}	
-        \caption{Les Modules d'un ERP et leurs fonctionnalités}
+        \caption{Les Modules d'un \acs{ERP} et leurs fonctionnalités}
     \end{center}
 \end{table}
+
+\section{le marché des \acs{ERP}s}
+Les \acs{ERP} en marché peuvent etre divisé en deux catégories: les \acs{ERP} open source et les \acs{ERP} propriétaires.
+
+    \subsection{Les \acs{ERP} open source}
+    Les \acs{ERP} open source sont ceux qui ont leurs code source est libre d'acces. Il est donc téléchargeable gratuitement et modifiable pour ajouter les fonctions nécessaires pour répondre aux besoins d'une entreprise ou la suppression des modules non nécessaire ou inutilisable déja existant.\\
+
+    L'un des principaux leaders des \acs{ERP} open sources est nommée Odoo:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.1]{ERP/Odoo_logo.png}
+        \caption{Logo Odoo}
+    \end{figure} 
+
+    Odoo\cite{odoo} est l'un des principaux logiciels \acs{ERP} open source, également connu sous le nom d'OpenERP\footnote{Open source \acs{ERP} - \acs{ERP} libre}. Il est composé de diverses applications et modules tels que le CRM, les ventes, la fabrication, la gestion de projet, les achats et la gestion des ressources humaines.\\
+
+    Le développement et la mise en œuvre d'Odoo vous permet de choisir parmi des milliers de modules disponibles dans la boutique. Le logiciels \acs{ERP} Odoo fournit des services de bout en bout tels que la personnalisation, la mise en œuvre, l'intégration et l'assistance à la formation.\\
+
+    \subsection{Les \acs{ERP} propriétaires}
+    Les \acs{ERP} propriétaires sont les \acs{ERP} conçus par des entreprises qui ont une grande expertise dans la conception de logiciels et de systèmes informatiques. Comme tout \acs{ERP}, il contient différents modules qui répondent aux besoins des entreprises sauf que le système est fourni avec une licence payante, des limitations d'utilisation et des obligations et responsabilités dont le client doit suivre.\\
+    
+    L'avantage de ce type d'\acs{ERP} est de pouvoir profiter d'un savoir-faire reconnu, d'un accompagnement pendant toutes les étapes du projet d'ERP, d'un service personnalisé et dédié assurant la maintenance et le service après-vente.\\
+
+    Parmis les leaders des \acs{ERP} propriétaires on peut citer SAP\cite{sap}, Microsoft Dynamics\cite{ms-dynamics} ou même Oracle \acs{ERP} Cloud\cite{oracle}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.03]{ERP/SAP_logo.png}
+        \includegraphics[scale=0.3]{ERP/MS-Dynamics-Logopng.png}
+        \includegraphics[scale=0.2]{ERP/Oracle_Cloud_logo.jpg}
+        \caption{Logo SAP, Microsoft Dynamics \& Oracle \acs{ERP} Cloud}
+    \end{figure}
+
+    Chacun de ces leaders propose sa propre solution que nous allons décrire dans le tableau suivant:
+
+    \begin{table}[H]
+        \begin{center}
+            
+            \begin{tabular}{|F{2.3cm}|R{3.5cm}|R{3.5cm}|R{3.5cm}|}
+                \hline
+                \textbf{ } & SAP & Microsoft & Oracle \\
+                \hline
+                Cible & \acs{PME}, \acs{ETI}, Grandes entreprises & \acs{PME}, \acs{ETI}, Grandes entreprises & \acs{PME}, \acs{ETI}, Grandes entreprises\\
+                
+                \hline
+                Solution & SAP ERP, S/4 HANNA, S/4 Cloud, SAP Business One, SAP Business By Design & Oracle \acs{ERP} Cloud & Microsoft Dynamics 365\\
+                
+                \hline
+                Modules
+                &
+                23 modules compris dans  3 catégories: Logistique, Comptabilité et RH
+                &
+                \begin{itemize}
+                    \item Ventes
+                    \item Marketing
+                    \item Service
+                    \item Finances
+                    \item Opérations
+                    \item Commerce
+                    \item RH
+                \end{itemize}
+                &
+                \begin{itemize}
+                    \item Finances
+                    \item Gestion de projets
+                    \item Gestion de l'approvisionnement
+                    \item Gestion des risques et conformité
+                    \item Gestion des performances d'entreprise
+                    \item Gestion de la chaîne d'approvisionnement et fabrication
+                    \item Analytique 
+                \end{itemize}
+                \\
+
+                \hline
+                SGBD
+                &
+                SAP HANNA, Microsoft SQL Server, Oracle, My
+                SQL.
+                &
+                Oracle Cloud
+                &
+                SQL Server
+                \\
+                
+                \hline
+            \end{tabular}	
+            \caption{Description des solution \acs{ERP} propriétaires: SAP, Microsoft Dynamics et Oracle \acs{ERP} Cloud}
+        \end{center}
+    \end{table}    
 
 \section{Conclusion}
 Nous avons présenté l'\acs{ERP}, sa définition, son histoire au cours des années en plus des avantages, que ce sois dans l'aspect administratif ou opérationnel, et des inconvénients qu'il peut apporter.\\
