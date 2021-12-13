@@ -10,41 +10,221 @@ Par la suite, nous passerons à l'analyse des principaux utilisateurs du systèm
 Nous terminerons par une conception des diagrammes de classes et des diagrammes de séquences ainsi qu'une présentation de la structure de la base de données.\\
 
 \section{Présentation d'\acs{UML}}
-\acs{UML} est un acronym qui signifie Unified Modeling Langage ou Langage de Modélisation Unifié en français, est apparu pour la première fois dans les années 1990. En simple, \acs{UML} est une approche moderne et méthodique de la modélisation et de la documentation des applications. C'est l'une des techniques de modélisation des processus d'entreprise les plus populaires.\\
+\acs{UML}\cite{uml-diag} est un acronym qui signifie Unified Modeling Langage ou Langage de Modélisation Unifié en français, est apparu pour la première fois dans les années 1990. En simple, \acs{UML} est une approche moderne et méthodique de la modélisation et de la documentation des applications. C'est l'une des techniques de modélisation des processus d'entreprise les plus populaires.\\
 
 Son approche est basée sur des représentations schématiques des composants d'un logiciel. Cette représentations visuelles nous donnent la possibilité de mieux mesurer les éventuelles erreurs ou défauts des logiciels.\\
 
-
 \subsection{Les diagrammes \acs{UML}}
-\subsubsection{Diagrammes des cas d'utilisation}
-\subsubsection{Diagrammes de classes}
-\subsubsection{Diagrammes de séquence}
+La représentation graphique des composants d'un logiciel\cite{uml-diag} et faites à l'aide de diagrammes. Ces diagrammes sont simples, stricte et contiennent des règles d'utilisations et de syntaxes bien fix.\\
+
+UML nous permet d'établire une représentation du logiciel sous plusieurs angles ou vues:
+
+\begin{itemize}
+    \item \textbf{Vue des cas d’utilisation} : vue des acteurs (besoins attendus)
+    \item \textbf{Vue logique} : vue de l'intérieur (satisfaction des besoins)
+    \item \textbf{Vue d’implantation} : dépendances entre les modules
+    \item \textbf{Vue des processus} : dynamique du système
+    \item \textbf{Vue de déploiement} : organisation environnementale du logiciel
+\end{itemize}
+
+UML est composé de plusieurs diagrammes chacun d'eux sert à des objectifs différent qu'il soit avant ou après la mise en oeuvre.
 
 \section{Analyse}
-La phase d’analyse débute par la spécification des besoins fonctionnels du système, ensuite définir les acteurs ainsi que leurs différentes tâches. Ceci nous mène vers un résultat qui est un diagramme de cas d’utilisation traduisant la dynamique système qui sera utilisé dans la phase de conception.
+La phase d’analyse débute par l'identification des acteurs ainsi que leurs différentes tâches dans le système, ensuite, la spécification des besoins fonctionnels et non fonctionelles du système. Ceci nous mène vers une schématisation par un diagramme des cas d’utilisation traduisant la dynamique système qui sera utilisé dans la phase de conception.
+
 
 \subsection{Spécification des besoins}
 \subsubsection{Besoins fonctionnels}
-C’est une description des caractéristiques du système et de ses fonctionnalités. En partant de ce principe notre application doit permettre :
+C’est une description des caractéristiques du système et de ses fonctionnalités. En partant de ce principe notre application doit permettre :\\
+
+    \textbf{Visiteurs\\}
+        \textbf{Consultation de la page d’accueil}
+        \begin{itemize}
+            \item Consulter le service d'hébergements
+            \item Télécharger le document d'aide à la constitution du dossier d'hébergement
+            \item Consulter le service de restauration
+            \item Consulter le service des transports
+            \item Consulter le service des bourses
+            \item Télécharger le document d'aide à la constitution du dossier de bourse
+            \item Télécharger le document d'aide au renouvellement du dossier de bourse
+            \item Télécharger le document d'aide au transfert du dossier de bourse\\
+        \end{itemize}
+
+        \textbf{Consultation du calendrier des menus de chaque restaurant d'un mois défini}
+        \begin{itemize}
+            \item Changer le mois du calendrier des menus
+            \item Changer l'affichage des menus par mois, semaine, jour de travail, jour et par agenda
+            \item Voir plus d'informations sur un seul menu\\
+        \end{itemize} 
+        
+        \textbf{Consultation du calendrier de tous les trajets de chaque Campus/Résidence d'un mois défini}
+        \begin{itemize}
+            \item Changer le mois du calendrier des trajets
+            \item Changer l’affichage des trajets par mois, semaine, jour de travail, jour et par agenda
+            \item Voir plus de détails sur un seul trajet \\
+        \end{itemize}
+
+\textbf{Staff\\}
+En plus des fonctionnalités du visiteur le staff peut aussi:\\
+
+    \textbf{Hébergement}
+    \begin{itemize}
+        \item Consulter la liste des dossiers d'hébergement
+        \item Sélectionner un ou plusieurs dossiers d'hébergement
+        \item Ajouter un dossier d'hébergement
+        \item Supprimer un ou plusieurs dossier(s) d'hébergement
+        \item Voir plus d'informations sur un dossier d'hébergement
+        \item Valider un dossier d'hébergement
+        \item Refuser un dossier d'hébergement \\
+    \end{itemize}
+
+    \textbf{Bourse}
+    \begin{itemize}
+        \item Consulter la liste des dossiers de bourse
+        \item Sélectionner un ou plusieurs dossiers de bourse
+        \item Ajouter un dossier de bourse
+        \item Supprimer un ou plusieurs dossier(s) de bourse
+        \item Voir plus d'informations sur un dossier de bourse
+        \item Valider un dossier de bourse
+        \item Refuser un dossier de bourse
+        \item Changer l'ordre d'affichage par attributs \\
+    \end{itemize}
+
+    \textbf{Campus \& Résidences}
+    \begin{itemize}
+        \item Consulter la liste des Campus \& Résidences
+        \item Ajouter un campus ou une résidence
+        \item Supprimer un campus ou une résidence
+        \item Voir plus d'informations sur un campus ou une résidence
+        \item Modifier les informations d'un campus ou une résidence
+        \item Rechercher un campus ou une résidence
+        \item Filtrer par campus seulement résidences seulement ou par campus \& résidences \\
+    \end{itemize}
+
+    \textbf{Transport - Calendrier}
+    \begin{itemize}
+        \item Voir les trajets détaillé de tout le mois
+        \item Ajouter un trajet
+        \item Modifier un trajet
+        \item Supprimer un trajet \\
+    \end{itemize}
+
+    \textbf{Transport - Bus}
+    \begin{itemize}
+        \item Consulter la liste des bus
+        \item Sélectionner un ou plusieurs bus
+        \item Ajouter un bus
+        \item Supprimer un ou plusieurs bus
+        \item Voir plus d'informations sur un bus
+        \item Modifier les informations d'un bus
+        \item Filtrer par attributs \\
+    \end{itemize}
+
+    \textbf{Restauration - Calendrier}
+    \begin{itemize}
+        \item Voir les menus détaillé de tout le mois par semaine
+        \item Ajouter un menu
+        \item Modifier un menu
+        \item Supprimer un menu \\
+    \end{itemize}
+
+    \textbf{Restauration - Restaurants}
+    \begin{itemize}
+        \item Consulter la liste des restaurants
+        \item Ajouter un restaurant
+        \item Supprimer un restaurant
+        \item Voir plus d'informations sur un restaurant
+        \item Modifier les informations d'un restaurant
+        \item Rechercher un restaurant
+        \item Filtrer par les restaurants par établissements ( appartiennent à un campus ou une résidence )\\
+    \end{itemize}
+
+    \textbf{Restauration - Plats \& Desserts}
+    \begin{itemize}
+        \item Consulter la liste des plats \& desserts
+        \item Ajouter un plat/dessert
+        \item Supprimer un plat/dessert
+        \item Voir plus d'informations sur un plat/dessert
+        \item Modifier les informations d'un plat/dessert
+        \item Rechercher un plat/dessert
+        \item Filtrer par plats seulement desserts seulement ou par plats \& desserts\\
+    \end{itemize}
+
+    \textbf{Restauration - Ingrédients}
+    \begin{itemize}
+        \item Consulter la liste des ingrédients
+        \item Sélectionner un ou plusieurs ingrédient(s)
+        \item Ajouter un ingrédient
+        \item Supprimer un ou plusieurs ingrédient(s)
+        \item Voir plus d'informations sur un ingrédient
+        \item Modifier les informations d'un ingrédient
+        \item Filtrer par attribut\\
+    \end{itemize}
+
+    \textbf{Administrateur\\}
+    En plus des fonctionnalités de l'utilisateur l'administrateur peut aussi: \\
+    \textbf{Utilisateurs}
+    \begin{itemize}
+        \item Consulter la liste des utilisateurs
+        \item Sélectionner un ou plusieurs utilisateur(s)
+        \item Ajouter un utilisateur
+        \item Supprimer un ou plusieurs utilisateur(s)
+        \item Voir plus d'informations sur un utilisateur
+        \item Modifier les informations d'un utilisateur
+        \item Filtrer par attributs\\
+    \end{itemize}
+
+\subsubsection{Besoins non fonctionnels}
+Ça représente des exigences qui ne concernent pas le comportement du système. Elles identifient les contraintes internes et externes du système. Dans notre cas l’application devra respecter les exigences suivantes :\\
+
+\noindent \textbf{Performance:} temps de réponse petit.\\
+\textbf{Maintenabilité:} apporter des corrections facilement.\\
+\textbf{Fiabilité:} précise et correcte.\\
+\textbf{Intégrabilité:} intégrer de nouvelles fonctionnalités facilement.\\
+\textbf{Portabilité:} elle peut fonctionner sur plusieurs plateformes.\\
+\textbf{Disponibilité:} réaliser une fonction requise à tout moment.\\
+\textbf{Sécurité:} personnaliser les accès selon l’utilisateur.\\
+
+\subsection{Identification des acteurs}
+Un acteur est une entité externe qui a la possibilité d'interagir et d'utiliser les multiples fonctionnalités du système.
+
+\subsubsection{Les acteurs qui interviennent dans notre système}
+\begin{itemize}
+    \item \textbf{L’administrateur :} C’est le cerveau de l’application, il gère toutes les fonctions de l’application ainsi que les utilisateurs et leurs rôles dans le site.
+    \item \textbf{L'utilisateur/staff :} Un staff est un gérant, il a un accès global aux fonctions de l'application hormis les fonctions liées aux utilisateurs.
+    \item \textbf{Le visiteur :} il peut uniquement consulter le contenu du site.
+\end{itemize}
+
+\subsubsection{Diagramme de contexte}
+Le diagramme de contexte, comme son nom l'indique, nous permet de bien comprendre de contexte de notre application et des acteurs qui y participent. Il nous permet d'avoir une vue globale sur les utilisateurs du système:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{ACR/Diagrammes/contexte.jpg}
+    \caption{Diagramme de contexte}
+\end{figure}
+
+\subsection{Spécification des tâches}
+Dans ce point, nous allons spécifier les tâches de chaque acteur. Le tableau suivant résume ces tâches :
 
 \begin{longtable}{|Z{3cm}|L{10cm}|}
-    \caption{Les acteurs et leurs fonctions respectives}\\
+    \caption{Spécification des tâches liées à chaque acteur}\\
     \hline
-    \textbf{Acteur} & \textbf{Fonctions} \\
+    \textbf{Acteur} & \textbf{Tâches} \\
     \hline
     \endfirsthead
     \multicolumn{2}{c}%
-    {\tablename\ \thetable\ -- \textit{Suite de la page précedente}} \\
+    {\tablename\ \thetable\ -- \textit{(Suite) Spécification des tâches liées à chaque acteur}} \\
     \hline
-    \textbf{Acteur} & \textbf{Fonctions} \\
+    \textbf{Acteur} & \textbf{Tâches} \\
     \hline
     \endhead
-    \hline \multicolumn{2}{r}{\textit{Suite dans la page suivante}} \\
+    \hline \multicolumn{2}{r}{\textit{(À suivre) Spécification des tâches liées à chaque acteur}} \\
     \endfoot
     \hline
     \endlastfoot
     Visiteurs &
-        \textbf{Consultation de la page d’accueil}
+        \textbf{T01 - Consultation de la page d’accueil}
         \begin{itemize}
             \item Consulter le service d'hébergements
             \item Télécharger le document d'aide à la constitution du dossier d'hébergement
@@ -56,14 +236,14 @@ C’est une description des caractéristiques du système et de ses fonctionnali
             \item Télécharger le document d'aide au transfert du dossier de bourse
         \end{itemize} \\
         &
-        \textbf{Consultation du calendrier des menus de chaque restaurant d'un mois défini}
+        \textbf{T02 - Consultation du calendrier des menus de chaque restaurant d'un mois défini}
         \begin{itemize}
             \item Changer le mois du calendrier des menus
             \item Changer l'affichage des menus par mois, semaine, jour de travail, jour et par agenda
             \item Voir plus d'informations sur un seul menu
         \end{itemize} \\
         &
-        \textbf{Consultation du calendrier de tous les trajets de chaque Campus/Résidence d'un mois défini}
+        \textbf{T03 - Consultation du calendrier de tous les trajets de chaque Campus/Résidence d'un mois défini}
         \begin{itemize}
             \item Changer le mois du calendrier des trajets
             \item Changer l’affichage des trajets par mois, semaine, jour de travail, jour et par agenda
@@ -71,10 +251,10 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \end{itemize}
      \\
      \hline
-    & 
-    En plus des fonctionnalités du visiteur il peut aussi:\\
-    Administrateur &
-    \textbf{Hébergement}
+    & \\ &
+    En plus des fonctionnalités du visiteur le staff peut aussi:\\
+    Staff &
+    \textbf{T01 - Hébergement}
     \begin{itemize}
         \item Consulter la liste des dossiers d'hébergement
         \item Sélectionner un ou plusieurs dossiers d'hébergement
@@ -88,7 +268,7 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Refuser un dossier d'hébergement
     \end{itemize}\\
     &
-    \textbf{Bourse}
+    \textbf{T02 - Bourse}
     \begin{itemize}
         \item Consulter la liste des dossiers de bourse
         \item Sélectionner un ou plusieurs dossiers de bourse
@@ -98,20 +278,8 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Valider un dossier de bourse
         \item Refuser un dossier de bourse
         \item Changer l'ordre d'affichage par attributs
-    \end{itemize}\\
-    Administrateur &
-    \textbf{Utilisateurs}
-    \begin{itemize}
-        \item Consulter la liste des utilisateurs
-        \item Sélectionner un ou plusieurs utilisateur(s)
-        \item Ajouter un utilisateur
-        \item Supprimer un ou plusieurs utilisateur(s)
-        \item Voir plus d'informations sur un utilisateur
-        \item Modifier les informations d'un utilisateur
-        \item Filtrer par attributs
-    \end{itemize}\\
-    &
-    \textbf{Campus \& Résidences}
+    \end{itemize}\\ &
+    \textbf{T03 - Campus \& Résidences}
     \begin{itemize}
         \item Consulter la liste des Campus \& Résidences
         \item Ajouter un campus ou une résidence
@@ -122,7 +290,7 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Filtrer par campus seulement résidences seulement ou par campus \& résidences
     \end{itemize}\\
     &
-    \textbf{Transport - Calendrier}
+    \textbf{T04 - Transport - Calendrier}
     \begin{itemize}
         \item Voir les trajets détaillé de tout le mois
         \item Ajouter un trajet
@@ -130,7 +298,7 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Supprimer un trajet
     \end{itemize}\\
     &
-    \textbf{Transport - Bus}
+    \textbf{T05 - Transport - Bus}
     \begin{itemize}
         \item Consulter la liste des bus
         \item Sélectionner un ou plusieurs bus
@@ -141,15 +309,14 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Filtrer par attributs
     \end{itemize}\\
     &
-    \textbf{Restauration - Calendrier}
+    \textbf{T06 - Restauration - Calendrier}
     \begin{itemize}
         \item Voir les menus détaillé de tout le mois par semaine
         \item Ajouter un menu
         \item Modifier un menu
         \item Supprimer un menu
-    \end{itemize}\\
-    Administrateur &
-    \textbf{Restauration - Restaurants}
+    \end{itemize}\\ &
+    \textbf{T07 - Restauration - Restaurants}
     \begin{itemize}
         \item Consulter la liste des restaurants
         \item Ajouter un restaurant
@@ -160,7 +327,7 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Filtrer par les restaurants par établissements ( appartiennent à un campus ou une résidence )
     \end{itemize}\\
     &
-    \textbf{Restauration - Plats \& Desserts}
+    \textbf{T08 - Restauration - Plats \& Desserts}
     \begin{itemize}
         \item Consulter la liste des plats \& desserts
         \item Ajouter un plat/dessert
@@ -171,43 +338,79 @@ C’est une description des caractéristiques du système et de ses fonctionnali
         \item Filtrer par plats seulement desserts seulement ou par plats \& desserts
     \end{itemize}\\
     &
-    \textbf{Restauration - Ingrédients}
+    \textbf{T09 - Restauration - Ingrédients}
     \begin{itemize}
         \item Consulter la liste des ingrédients
         \item Sélectionner un ou plusieurs ingrédient(s)
         \item Ajouter un ingrédient
-    \end{itemize}\\
-    Administrateur&    
-    \begin{itemize}
         \item Supprimer un ou plusieurs ingrédient(s)
         \item Voir plus d'informations sur un ingrédient
         \item Modifier les informations d'un ingrédient
         \item Filtrer par attribut
+    \end{itemize} \\
+    \hline & \\ Administrateur & 
+    En plus des fonctionnalités de l'utilisateur l'administrateur peut aussi:\\
+    & \\ &
+    \textbf{T01 - Utilisateurs}
+    \begin{itemize}
+        \item Consulter la liste des utilisateurs
+        \item Sélectionner un ou plusieurs utilisateur(s)
+        \item Ajouter un utilisateur
+        \item Supprimer un ou plusieurs utilisateur(s)
+        \item Voir plus d'informations sur un utilisateur
+        \item Modifier les informations d'un utilisateur
+        \item Filtrer par attributs
     \end{itemize}
 \end{longtable}
 
+\subsection{Représentation des diagrammes des cas d'utilisation}
+Il répond à la question "Comment les participants au système interagissent-ils avec lui ?". En d'autres termes, le diagramme de cas d'utilisation permet de définir la relation entre le système et les participants.
 
-\subsubsection{Besoins non fonctionnels}
-Ça représente des exigences qui ne concernent pas le comportement du système. Elles identifient les contraintes internes et externes du système. Dans notre cas l’application devra respecter les exigences suivantes :\\
+\subsubsection{Diagramme des cas d’utilisation global}
+\paragraph*{Remarque} Les cas d'utilisation de l'acteur "staff" sont nombreux, pour ceux et pour ne pas encombré le diagramme des cas d'utilisation global, nous avons omis les détails de cette acteur puis détaillées, plus bas, les cas d'utilisation spécifiques. \textbf{Les cas dont les détailes son omis sont marqué par un asterics "*"}\\
 
-\noindent \textbf{Performance:} temps de réponse petit.\\
-\textbf{Maintenabilité:} apporter des corrections facilement.\\
-\textbf{Fiabilité:} précise et correcte.\\
-\textbf{Intégrabilité:} intégrer de nouvelles fonctionnalités facilement.\\
-\textbf{Portabilité:} elle peut fonctionner sur plusieurs plateformes.\\
-\textbf{Disponibilité:} réaliser une fonction requise à tout moment.\\
-\textbf{Sécurité:} personnaliser les accès selon l’utilisateur.\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.078]{ACR/Diagrammes/Global (1).jpg}
+    \caption{Cas d'utilisation global}
+\end{figure}
 
+\subsubsection{Diagrammes des cas d’utilisation détaillés}
+\input{ACR/util-det}
 
-\subsection{Analyse des besoins}
-\subsubsection{Le diagramme de contexte}
-\subsubsection{Le diagramme de cas d'utilisation}
+\section{Conception}
+Après avoir terminé la modélisation de notre application avec différents diagrammes, nous allons passer à la phase de conception.\\
+
+Nous commencerons par quelles ques diagrammes de séquence, puis passerons aux diagrammes de classes. Nous finirons avec une présentation de la structure globale de la base de données.\\
+
 \subsubsection{Les diagrammes de séquence}
+Les diagrammes de séquence permettent de décrire les scénarios de chaque cas d'utilisation avec une chronologie des opérations.
 
+\paragraph*{Remarque} En vue du nombre important des cas d'utilisation de notre application, nous n'allons présenter que quelques diagrammes de séquences.\\
 
-\section{Conception de la base de données}
-\subsection{Le diagramme de classe}
-\subsection{Passage du digramme de classe au modèle relationnel}
-\subsection{Modèle relationnel}
+\subsubsection{Le diagramme de classe}
+Dans la programmation orientée objet, le diagramme de classes est le plus important. Il est le seul obligatoire dans une telle modélisation\\
+
+Le diagramme de classes a pour but de montrer la structure interne du système. Il nous permet d'avoir une vue statique et abstraite de l'ensemble des interactions des objets du système.\\
+
+\paragraph*{Remarque} Pour le pas encombré notre diagramme de classes nous allons définir nos classes, leurs attributs et leurs méthodes d'abord. Par la suite nous définirons les associations et les relations entre les classes.\\
+
+\input{ACR/classes.tex}
+
+\subsubsection{Structure de la base de données}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.38]{ACR/Diagrammes/diag.png}
+    \caption{Structure de la base de données}
+\end{figure}
 
 \section{Conclusion}
+À l'aide de l'analyse et de la conception, nous avons établi une description graphique de notre projet à travers une utilisation d'\acs{UML} et de ses diagrammes.\\
+
+Nous avons commencé par une présentation et une définition d'\acs{UML} et de ses différents diagrammes.\\
+
+Par la suite, dans la partie analysée, nous avons spécifié les besoins fonctionnels et non fonctionnels de notre application. Ceci nous a mené à l'identification des différents acteurs qui interagissent avec notre système et la spécification des taches de chacun d'eux, ainsi qu'une représentation dès les multiples cas d'utilisation de notre application\\
+
+Finalement, nous sommes passé à la partie conception, où nous avons présenté les différents scénarios du système à l'aide des diagrammes de séquence. Nous avons aussi présenté la structure interne du système à l'aide des diagrammes de classes ainsi qu'une présentation globale de la structure de la base de données.\\
+
+Après avoir analysé et conceptualiser notre système nous allons passer à la partie suite qui est la réalisation de l'application.
