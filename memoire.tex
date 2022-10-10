@@ -1,170 +1,189 @@
-\documentclass[11pt,a4paper,onecolumn,openright,oneside]{report}
+\documentclass[12pt,a4paper,onecolumn,openright,oneside]{report}
 \usepackage[square,sort&compress,comma,numbers]{natbib}
 \usepackage[sectionbib]{chapterbib}
 \usepackage[printonlyused,withpage]{acronym}
+\usepackage{helvet}
+\usepackage{lastpage}
+\renewcommand{\familydefault}{\sfdefault}
 \input{preambule}
 \makesavenoteenv{tabular}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \begin{document}
 	\setcellgapes{3pt}
-	
-	\begin{titlepage}
-		
-		\begin{center}
-			
-			\textsc{\LARGE République Algérienne Démocratique et Populaire}\\
-			\textsc{\LARGE Ministère de l’Enseignement Supérieur et de la Recherche Scientifique}\\
-			\textsc{\LARGE Université Mouloud Mammeri de Tizi-Ouzou}\\
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[scale=1.5]{ummto.PNG}
-			\end{figure}
-			
-			\textsc{\Large En vue de l’obtention du diplôme de Master Academique}\\
-			\textsc{\Large Spécialité : Informatique}\\
-			\textsc{\Large Options : Systèmes Informatiques et Ingénierie Des Systèmes d’information}\\[1cm]
-			
-			
-			\textsc{\Large Thème}\\
-			\HRule \\[0.5cm]
-			% { \huge \bfseries Mise en place d'une solution web ERP \\
-			% 	Cas: Œuvres Universitaires \\[0.4cm] }
-            { \huge \bfseries Implémentation d'une solution web ERP \\
-				Cas: Œuvres Universitaires \\[0.4cm] }
-			
-			\HRule \\[0.5cm]
-			
-			
-			\emph{Présenté par :}\\
-			
-			Yanis \textsc{OUERDANE}\\
-			Mohand \textsc{OURAD}\\[1.5cm]
-			
-			\emph{Devant le jury composé de :}\\
-			
-			\leftskip=4.5cm
-			Président : P$^{r}$ \textsc{Daoui} Mehammed \\
-			Examinatrice : M$^{me}$ \textsc{Hadaoui} Rebiha ep \textsc{Skendraoui}\\
-			Promotrice : M$^{me}$ \textsc{Goumeziane} Lynda \\ [1.5cm]
-			
-			
-			\vfill
-            {\large Année universitaire: 2020/2021}
-			
-		\end{center}
-		
-	\end{titlepage}
 
-	\chapter*{\huge Remerciements}
+	% \begin{titlepage}
+		
+	% 	\begin{center}
+			
+	% 		\begin{figure}[H]
+	% 			\centering
+	% 			\includegraphics[scale=1.5]{ummto.PNG}
+	% 		\end{figure}
+			
+	% 		\textsc{\Large En vue de l’obtention du diplôme de Master Academique}\\
+	% 		\textsc{\Large Spécialité : Informatique}\\
+	% 		\textsc{\Large Options : Systèmes Informatiques et Ingénierie Des Systèmes d’information}\\[1cm]
+			
+			
+	% 		\textsc{\Large Thème}\\
+	% 		\HRule \\[0.5cm]
+	% 		% { \huge \bfseries Mise en place d'une solution web ERP \\
+	% 		% 	Cas: Œuvres Universitaires \\[0.4cm] }
+    %         { \huge \bfseries Implémentation d'une solution web ERP \\
+	% 			Cas: Œuvres Universitaires \\[0.4cm] }
+			
+	% 		\HRule \\[0.5cm]
+			
+			
+	% 		\emph{Présenté par :}\\
+			
+	% 		Yanis \textsc{OUERDANE}\\
+	% 		Mohand \textsc{OURAD}\\[1.5cm]
+			
+	% 		\emph{Devant le jury composé de :}\\
+			
+	% 		\leftskip=4.5cm
+	% 		Président : P$^{r}$ \textsc{Daoui} Mehammed \\
+	% 		Examinatrice : M$^{me}$ \textsc{Hadaoui} Rebiha ep \textsc{Skendraoui}\\
+	% 		Promotrice : M$^{me}$ \textsc{Goumeziane} Lynda \\ [1.5cm]
+			
+			
+	% 		\vfill
+    %         {\large Année universitaire: 2020/2021}
+			
+	% 	\end{center}
+		
+	% \end{titlepage}
+
+	\afterpage{\blankpage}
+
+	\chapter*{\huge Abstract}
+		
+	In this work, a detailed description of my 2nd year master’s internship for six months within the International Roaming Department at ORANGE S.A company is given.\\
+
+	The world of roaming is very wide, and the duration of my internship was not long enough to master all the parts of this word. In this report, I summarize almost all the projects I was involved in. Starting from the definition of many keywords that are used every day in the roaming department and Passing by the necessary steps of Orange France process of coordination in order to launch roaming services with roaming partners. Also, I describe the relation of my role with the other departments, working as a team for the same goal.
+	\\
+		
+	Under the responsibility of the roaming services manager, I contribute to the construction of roaming agreements in interface with mobile operators all around the world which are going to be shown in this report. A very transversal mission that allowed me to approach all aspects of the roaming activity.
+	\\
+		
+	The main goal of « Pilotage des Accords de Roaming \acs{OWF}» mission consists of guarantee the commercial, legal, and technical coordination of roaming services launches in order to extend the international Orange France coverage, in my case for all voice and data services below:
+	\begin{itemize}[label={\textbullet}]
+		\item \acs{GSM} (\acs{2G}) and \acs{GPRS} (Data) to describe the direct process of launch and the process via the roaming hub.
+		\item \acs{3G} to describe the launch by default, why and when Orange France prefers it. 
+		\item \acs{4G} \acs{LTE} shows a different process of testing by a remote tool.
+		\item \acs{5G} \acs{NSA}, where I had the opportunity to manage and conduct the operations via the roaming center team in order to launch the new technology with the most possible number of operators in order to provide Orange France customers the best experience all around the world.
+	\end{itemize}
+
+	% \chapter*{\huge Dédicaces}
 	
-	\begin{center}
-		\it \Large
-		D’abord, nous remercions le bon \textbf{DIEU} de nous avoir donné santé et courage pour réaliser ce travail.\\
+	% \begin{center}
+	% 	\it \Large
+	% 	Je dédie ce modeste travail :
+	% 	A mes très chers parents que dieu les
+	% 	protège, pour leur aide et leur soutien tout au long
+	% 	de mes études,\\
 		
-		Nous tenons à exprimer notre profonde gratitude à notre encadreur \textbf{Mme GOUMEZIANE Lynda}, pour nous avoir encadrée et guidée et surtout pour ses judicieux conseils qui ont contribué à alimenter notre réflexion.\\
+	% 	A toute ma famille, à mes chers amis,\\
 		
-		Nous remercions chaleureusement les membres de jury pour l’honneur qu’ils nous ont fait en acceptant de juger notre travail.\\
+	% 	Enfin à tous ceux qui ont contribué de près
+	% 	ou de loin pour la réalisation de ce travail.\\
 		
-		Nos sincères sentiments vont à nos parents qui ont sacrifié jusqu’aujourd’hui et leurs encouragements tout le long de notre parcours.\\
+	% 	\leftskip=12cm
 		
-		\leftskip=10cm 
+	% 	Yanis.
 		
-		Yanis, Mohand.
+	% 	\leftskip=0cm
 		
-		\leftskip=0cm
-		
-	\end{center}
-	%------------------- End Remerciement ----------------------------
-	
-	\chapter*{\huge Dédicaces}
-	
-	\begin{center}
-		\it \Large
-		Je dédie ce modeste travail :
-		A mes très chers parents que dieu les
-		protège, pour leur aide et leur soutien tout au long
-		de mes études,\\
-		
-		A toute ma famille, à mes chers amis,\\
-		
-		Enfin à tous ceux qui ont contribué de près
-		ou de loin pour la réalisation de ce travail.\\
-		
-		\leftskip=12cm
-		
-		Yanis.
-		
-		\leftskip=0cm
-		
-	\end{center}
-    \chapter*{\huge Dédicaces}
-	
-	\begin{center}
-		\it \Large
-		Je dédie ce modeste travail :
-		A mes très chers parents que dieu les
-		protège, pour leur aide et leur soutien tout au long
-		de mes études,\\
-		
-		A toute ma famille, à mes chers amis,\\
-		
-		Enfin à tous ceux qui ont contribué de près
-		ou de loin pour la réalisation de ce travail.\\
-		
-		\leftskip=12cm
-		
-		Mohand.
-		
-		\leftskip=0cm
-		
-	\end{center}
+	% \end{center}
 	
 	\tableofcontents
-	\listoffigures
-	\addcontentsline{toc}{chapter}{Table des figures}
-	\listoftables
-	\addcontentsline{toc}{chapter}{Liste des tableaux}
+	% \listoffigures
+	% \listoftables
 
 	\include{abreviations/abr}
+	
+	\listoffigures
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\begingroup
+	\let\clearpage\relax
+	\listoftables
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\endgroup
 
 	\pagestyle{fancy}
 	\fancyhead{}
 	
-	\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
+	% \renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
 	
 	% \rhead[\textsl{\leftmark}]{\textsl{\rightmark}}
-	\lhead[\textsl{\rightmark}]{\textsl{\leftmark}}
+	% \lhead[\textsl{\rightmark}]{\textsl{\leftmark}}
 	
-	\renewcommand{\headrulewidth}{1.2pt}
+	\renewcommand{\headrulewidth}{0pt}
 	
-	\newcommand\blfootnote[1]{
-		\begingroup
-		\renewcommand\thefootnote{}\footnote{#1}
-		\addtocounter{footnote}{-1}
-		\endgroup
-	}
+	% \newcommand\blfootnote[1]{
+	% 	\begingroup
+	% 	\renewcommand\thefootnote{}\footnote{#1}
+	% 	\addtocounter{footnote}{-1}
+	% 	\endgroup
+	% }
 
-	\part*{Introduction Générale}
-	\addcontentsline{toc}{part}{Introduction Générale}
+	\chapter{General Introduction}
 		\input{intro/introduction}
+
+	\chapter{Roaming Definition and Solutions}
+		\input{part2/roaming}
+
+	\chapter{Coordination and Management}
+		\input{part3/coord}
+
+	\chapter*{Conclusion}
+	\addcontentsline{toc}{chapter}{Conclusion}
+	\-\hspace{0.5cm} The challenges of the Roaming and International department of Orange France are diverse, particularly because it is responsible for the Wholesale revenue generated by the entire Roaming activity.\\
+
+	International roaming is a service available with Orange France. It is the possibility to reach and be reached instantly in more than 213 countries, on the networks of nearly 400 operators.\\
+
+	This service is made possible by:
+
+	\begin{itemize}
+		\item The various commercial agreements signed between Orange and foreign mobile operators
+		\item The technical interconnection between the networks
+		\item The creation of attractive commercial offers for customers
+		\item The roaming agreements manager position offered me the possibility to evolve in an international environment and discover a specific domain as Roaming.
+	\end{itemize}
+
+	This internship has been very valuable in term of meetings and exchanges with people of diverse origins and courses.\\
+
+	This mission needed a lot of diverse qualities from me, especially organizational and relational with a great analytical and reasoning capacity. \\
+
+	Within this internship, I had the opportunity to act as a roaming manager on the 5G NSA project which give a strong desire and high motivation to start my professional career this field to become an international roaming Manager.
+
+
 	
-	\part{Définitions Générales}
-		\input{ERP/ERP}
-		\input{DOU/DOU}
+	% \part{Définitions Générales}
+	% 	\input{ERP/ERP}
+	% 	\input{DOU/DOU}
 
-	\part{Analyse, Conception \& Réalisation}
-		\input{ACR/AC}
-		\input{ACR/R}
+	% \part{Analyse, Conception \& Réalisation}
+	% 	\input{ACR/AC}
+	% 	\input{ACR/R}
 
-	\part*{Conclusion Générale}
-	\lhead[]{}
-	\addcontentsline{toc}{part}{Conclusion Générale}
-		\input{END/END}
+	% \part*{Conclusion Générale}
+	% \lhead[]{}
+	% \addcontentsline{toc}{part}{Conclusion Générale}
+	% 	\input{END/END}
 
 	\leftskip=0cm
-	\renewcommand{\bibname}{Référence bibliographique et webographique}
+	\renewcommand{\bibname}{References}
 	\bibliographystyle{ieeetr}
-	\bibliography{ERP/erp,DOU/dou,ACR/acr}
+	\bibliography{intro/intro,part2/roaming,part3/coord}
+
+	\afterpage{\blankpage}
+
+	\include{annexs/an.tex}
 	
 \end{document}

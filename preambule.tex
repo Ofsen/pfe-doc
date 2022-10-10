@@ -24,7 +24,7 @@ hyperfootnotes=false]{hyperref}
 \newcolumntype{F}[1]{>{ \centering \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
 \newcolumntype{R}[1]{>{  \vspace{1.mm} \arraybackslash}m{#1}<{ \vspace{1.mm}\arraybackslash }}
 \newcolumntype{G}[1]{>{ \centering \vspace{2.mm} \arraybackslash}m{#1}<{ \vspace{2.mm}\arraybackslash }}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\ragge\acs{DRI} ght\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{Z}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %---- End Tableau Considérations pour les systèmes relationnels vs NoSQL
 
@@ -35,11 +35,21 @@ hyperfootnotes=false]{hyperref}
 
 \usepackage{footnote} %------ Pur ressortir les note des élèment du tableau
 
-\usepackage[french]{babel}
+\usepackage[english]{babel}
 
 \usepackage{fancyhdr}
 
 \usepackage{adjustbox}% pour orionté le tab 90°
 \usepackage{amssymb}% pour chekmark dans le tableau
+
+\usepackage{afterpage}
+
+\addto\captionsenglish{\renewcommand{\chaptername}{Part}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 
 \setlength{\headheight}{14pt}
